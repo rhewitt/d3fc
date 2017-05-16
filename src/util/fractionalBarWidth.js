@@ -12,7 +12,7 @@ export default function(fraction) {
             return 10;
         }
 
-        pixelValues.sort();
+        pixelValues.sort( function(a, b){return a - b} );
 
         // compute the distance between neighbouring items
         var neighbourDistances = d3.pairs(pixelValues)
